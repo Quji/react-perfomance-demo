@@ -1,5 +1,5 @@
 import React from "react";
-//import {log} from "../helpers";
+import {log} from "../helpers";
 
 const style = {
   padding: '5px',
@@ -8,7 +8,7 @@ const style = {
 };
 
 function ListItem({ value, onClick }) {
-  //log('ListItem' + value);
+  log('ListItem' + value);
   return (
     <div style={style}>
       <a href="#null" onClick={onClick}>{value}</a>
@@ -16,4 +16,4 @@ function ListItem({ value, onClick }) {
   );
 }
 
-export default ListItem;
+export default React.memo(ListItem);

@@ -3,11 +3,11 @@ import { log } from '../helpers';
 import {useSelector} from "react-redux";
 
 function Status() {
-  const { status } = useSelector((state) => state.counter);
+  const status = useSelector((state) => state.counter.status);
   log('Status');
   return (
     <div>{status}</div>
   );
 }
 
-export default Status;
+export default React.memo(Status);
